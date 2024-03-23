@@ -7,7 +7,6 @@ import { Switch } from 'react-native';
 
 
 function AnimatedStyleUpdateExample(props) {
-    const randomWidth = useSharedValue(10);
     const modalizeRef = useRef(null);
     const [isModalOpened, setIsModalOpened] = useState(false); // Nuevo estado para controlar la apertura del modal
     const { theme, toggleTheme } = useTheme();
