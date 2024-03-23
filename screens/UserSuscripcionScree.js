@@ -311,7 +311,7 @@ useEffect(() => {
   const initializePurchases = async () => {
     if (Platform.OS === 'ios') {
       Purchases.setDebugLogsEnabled(true);
-      await Purchases.configure({ apiKey: 'appl_jeRcGcmSqhNLqVVsEgvUYbAFjFn' });
+      await Purchases.configure({ apiKey: 'API' });
 
       try {
         const purchaserInfo = await Purchases.getPurchaserInfo();

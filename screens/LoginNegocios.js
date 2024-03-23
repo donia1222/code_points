@@ -101,7 +101,7 @@ useEffect(() => {
   const initializePurchases = async () => {
     try {
       await Purchases.setDebugLogsEnabled(true);
-      await Purchases.configure({ apiKey: 'appl_jeRcGcmSqhNLqVVsEgvUYbAFjFn' });
+      await Purchases.configure({ apiKey: 'API' });
 
       const customerInfo = await Purchases.getCustomerInfo();
       console.log('Información del cliente:', customerInfo);

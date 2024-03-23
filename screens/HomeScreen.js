@@ -333,7 +333,7 @@ function showAlertPermissionDenied() {
 
 const obtenerDireccion = async (latitude, longitude) => {
   try {
-    const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=AIzaSyBW9b_afaQKqhZKbB96rdVvqzKah0CSsI8`);
+    const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=API`);
     const data = await response.json();
     if (data.status === 'OK') {
       // Asumimos que la primera ubicación es la correcta
@@ -397,7 +397,7 @@ useEffect(() => {
       const negocios = await respuesta.json();
       const negociosConCoordenadas = await Promise.all(negocios.map(async negocio => {
         // Aquí utilizas el Geocoding API para convertir la dirección en coordenadas
-        const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(negocio.columna_direccion)}&key=AIzaSyBW9b_afaQKqhZKbB96rdVvqzKah0CSsI8`);
+        const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(negocio.columna_direccion)}&key=API`);
         const data = await response.json();
         if (data.status === 'OK') {
           // Asumimos que la primera ubicación es la correcta
